@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-
-import com.umpay.adoptme.dummy.DummyContent;
+import com.umpay.adoptme.adapter.PetsAdapter;
+import com.umpay.adoptme.sample.Pet;
+import com.umpay.adoptme.sample.SampleDataUtils;
 
 /**
  * A list fragment representing a list of Pets. This fragment
@@ -72,11 +72,13 @@ public class PetListFragment extends ListFragment {
         super.onCreate(savedInstanceState);
 
         // TODO: replace with a real list adapter.
-        setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(
-                getActivity(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                DummyContent.ITEMS));
+//        setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(
+//                getActivity(),
+//                android.R.layout.simple_list_item_activated_1,
+//                android.R.id.text1,
+//                DummyContent.ITEMS));
+
+        setListAdapter(new PetsAdapter(getActivity(), SampleDataUtils.getSamplePets(getActivity())));
     }
 
     @Override
@@ -116,7 +118,8 @@ public class PetListFragment extends ListFragment {
 
         // Notify the active callbacks interface (the activity, if the
         // fragment is attached to one) that an item has been selected.
-        mCallbacks.onItemSelected(DummyContent.ITEMS.get(position).id);
+//        mCallbacks.onItemSelected(DummyContent.ITEMS.get(position).id);
+        mCallbacks.onItemSelected(((Pet)getListAdapter().getItem(position)).id + "");
     }
 
     @Override

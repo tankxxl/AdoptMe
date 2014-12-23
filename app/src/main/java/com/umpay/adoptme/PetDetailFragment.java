@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
-import com.umpay.adoptme.dummy.DummyContent;
+import com.umpay.adoptme.sample.Pet;
+import com.umpay.adoptme.sample.SampleDataUtils;
 
 /**
  * A fragment representing a single Pet detail screen.
@@ -26,7 +26,7 @@ public class PetDetailFragment extends Fragment {
     /**
      * The dummy content this fragment is presenting.
      */
-    private DummyContent.DummyItem mItem;
+    private Pet mItem;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -43,7 +43,9 @@ public class PetDetailFragment extends Fragment {
             // Load the dummy content specified by the fragment
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider.
-            mItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+//            mItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+
+            mItem = SampleDataUtils.getSamplePets(getActivity()).get(0);
         }
     }
 
@@ -54,7 +56,7 @@ public class PetDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.pet_detail)).setText(mItem.content);
+            ((TextView) rootView.findViewById(R.id.pet_detail)).setText(mItem.description);
         }
 
         return rootView;
