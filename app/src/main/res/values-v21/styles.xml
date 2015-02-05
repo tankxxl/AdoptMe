@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+
+        <item name="android:colorPrimary">@color/rgz_red</item>
+        <item name="android:colorPrimaryDark">@color/rgz_green</item>
+        <item name="android:colorAccent">@color/rgz_blue</item>
+        <item name="android:colorControlHighlight">@color/sa_green_transparent</item>
+    </style>
+</resources>

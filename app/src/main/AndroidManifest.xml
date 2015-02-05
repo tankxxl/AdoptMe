@@ -12,11 +12,6 @@
         <activity
             android:name=".PetListActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".PetDetailActivity"
@@ -26,6 +21,32 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PetListActivity" />
         </activity>
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".loading.LoadingActivity" />
+        <activity
+            android:name=".ripple.RipplesActivity"
+            android:label="@string/title_activity_ripples" >
+        </activity>
+        <activity
+            android:name=".propertyanim.PropertyAnimActivity"
+            android:label="@string/title_activity_property_anim" >
+        </activity>
+        <activity
+            android:name=".tween.TweenActivity"
+            android:label="@string/title_activity_tween" >
+        </activity>
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

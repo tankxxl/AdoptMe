@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/frame_loading"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/rotate_loading_360"
+            android:indeterminateDuration="1800"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/rotate_loading_github"
+            android:indeterminateDuration="1800"/>
+
+
+        </LinearLayout>
+
+    <com.umpay.adoptme.loading.CustomClipLoading
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.umpay.adoptme.loading.CircleProgressBar
+        android:id="@+id/circleProgressbar"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+
+
+</LinearLayout>

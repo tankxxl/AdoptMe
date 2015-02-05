@@ -1,8 +1,40 @@
 apply plugin: 'com.android.application'
 
+// Properties are defined in the 'build.gradle' file, typically in an extra block.
+ext {
+    versionCode = '1.0.1'
+    versionNumber = '12'
+}
+// Once properties are added, they can be read and set like predefined properties. Properties can
+// also be passed in via the command line using the '-P' flag:
+// -> gradle buildTask -P extraProperty
+
+
+/*
+* Projects represent a piece of your application, but they do not tell Gradle how you want it to actually
+* be built. For this, we use tasks.
+* Tasks are the discrete pieces of work performed by a build. A project can be made up of many tasks
+* it needs in order to do its work. Declaring tasks is very simple.
+* */
+task hello {
+    doLast {
+        println 'hello world'
+    }
+}
+/*
+* This defines the hello task if it it not already defined, and tells the task to print the line 'hello world'
+* last in its execution. In order to execute a task from the command line, you type:
+*  -> gradle hello
+* If you would like the output without the logs, you can pass in the -q flag:
+*  -> gradle -q hello
+* */
+
+// Using Ant from Gradle
+//ant.importBuild 'build.xml'
+
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    buildToolsVersion '21.1.2'
     defaultConfig {
         applicationId "com.umpay.adoptme"
         minSdkVersion 15
@@ -25,11 +57,19 @@ android {
     }
 }
 
+apply plugin: 'android-unit-test'
+
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:support-v4:21.0.3'
     compile project(':sample')
+    compile project(':core')
+    testCompile 'org.robolectric:robolectric:2.4'
+    testCompile 'junit:junit:4.+'
     androidTestCompile 'com.jakewharton.espresso:espresso:1.1-r3'
     compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.android.support:support-v13:21.0.3'
+    compile 'com.android.support:palette-v7:21.0.3'
 }

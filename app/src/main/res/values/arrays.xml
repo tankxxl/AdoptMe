@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="part_layouts">
+        <item>fragment_part1</item>
+        <item>fragment_part2</item>
+        <item>fragment_part3</item>
+    </string-array>
+
+    <string-array name="part_titles">
+        <item>Part 1</item>
+        <item>Part 2</item>
+        <item>Part 3</item>
+    </string-array>
+</resources>

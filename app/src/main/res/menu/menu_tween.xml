@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.umpay.adoptme.tween.TweenActivity">
+    <item
+        android:id="@+id/rotate360"
+        android:orderInCategory="100"
+        android:title="@string/rotate_String"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/zoomInOut"
+        android:orderInCategory="100"
+        android:title="@string/zoom_In_Out"
+        />
+
+    <item
+        android:id="@+id/fadeInOut"
+        android:orderInCategory="100"
+        android:title="@string/fade_String"
+        />
+
+</menu>
