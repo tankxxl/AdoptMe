@@ -36,7 +36,7 @@ android {
     compileSdkVersion 21
     buildToolsVersion '21.1.2'
     defaultConfig {
-        applicationId "com.umpay.adoptme"
+        applicationId "com.rgz.adoptme"
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1

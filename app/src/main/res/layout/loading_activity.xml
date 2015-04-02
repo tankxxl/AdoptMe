@@ -33,11 +33,11 @@
 
         </LinearLayout>
 
-    <com.umpay.adoptme.loading.CustomClipLoading
+    <com.rgz.adoptme.loading.CustomClipLoading
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.umpay.adoptme.loading.CircleProgressBar
+    <com.rgz.adoptme.loading.CircleProgressBar
         android:id="@+id/circleProgressbar"
         android:layout_width="60dp"
         android:layout_height="60dp" />

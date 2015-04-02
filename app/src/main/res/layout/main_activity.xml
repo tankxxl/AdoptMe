@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_tween"/>
 
-        <com.umpay.adoptme.widget.AnimButton
+        <com.rgz.adoptme.widget.AnimButton
             android:id="@+id/btn_anim"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

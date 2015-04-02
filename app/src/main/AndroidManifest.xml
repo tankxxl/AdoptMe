@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.umpay.adoptme" >
+    package="com.rgz.adoptme" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,43 +10,43 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".PetListActivity"
+            android:name="com.rgz.adoptme.PetListActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".PetDetailActivity"
+            android:name="com.rgz.adoptme.PetDetailActivity"
             android:label="@string/title_pet_detail"
-            android:parentActivityName=".PetListActivity" >
+            android:parentActivityName="com.rgz.adoptme.PetListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PetListActivity" />
+                android:value="com.rgz.adoptme.PetListActivity" />
         </activity>
-        <activity android:name=".MainActivity" >
+        <activity android:name="com.rgz.adoptme.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".loading.LoadingActivity" />
+        <activity android:name="com.rgz.adoptme.loading.LoadingActivity" />
         <activity
-            android:name=".ripple.RipplesActivity"
+            android:name="com.rgz.adoptme.ripple.RipplesActivity"
             android:label="@string/title_activity_ripples" >
         </activity>
         <activity
-            android:name=".propertyanim.PropertyAnimActivity"
+            android:name="com.rgz.adoptme.propertyanim.PropertyAnimActivity"
             android:label="@string/title_activity_property_anim" >
         </activity>
         <activity
-            android:name=".tween.TweenActivity"
+            android:name="com.rgz.adoptme.tween.TweenActivity"
             android:label="@string/title_activity_tween" >
         </activity>
 
-        <service
-            android:name=".MyService"
-            android:enabled="true"
-            android:exported="true" >
-        </service>
+        <!--<service-->
+            <!--android:name=".MyService"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="true" >-->
+        <!--</service>-->
     </application>
 
 </manifest>
