@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 public class RipplesFragment extends Fragment {
 
 
-    public static final String ARG_LAYOUT = "com.umpay.ripple.ARG_LAYOUT";
+    public static final String ARG_LAYOUT = "com.rgz.ripple.ARG_LAYOUT";
 
     public RipplesFragment() {
         // Required empty public constructor
